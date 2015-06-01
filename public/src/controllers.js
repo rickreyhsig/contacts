@@ -14,6 +14,14 @@ angular.module('ContactsApp')
         $scope.show = function (id) {
             $location.url('/contact/' + id);
         };
+    })
+    .controller('SingleController', function ($scope, $location, Contact, $routeParams) {
+        //$rootScope.PAGE = "single";
+        $scope.contact = Contact.get({ id: parseInt($routeParams.id, 10) }); 
+        /*$scope.delete = function () {
+            $scope.contact.$delete();
+            $location.url('/contacts');
+        };*/
     });
 
 

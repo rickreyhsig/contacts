@@ -5,13 +5,13 @@ angular.module('ContactsApp', ['ngRoute', 'ngResource'])
                 controller: 'ListController',
                 templateUrl: 'views/list.html'
             })
-            /*.when('/contact/:id', {
+            .when('/contact/:id', {
                 controller: 'SingleController',
                 templateUrl: 'views/single.html'
             })
             .otherwise({
                 redirectTo: '/contacts'   
-            });*/
+            });
         $locationProvider.html5Mode(true);
     })
 
